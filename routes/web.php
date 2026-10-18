@@ -1,11 +1,10 @@
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PelangganController;
 
-Route::get('/', function () {
-    return view('guest.home');
-});
+// route lain tetap dipertahankan
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
+Route::resource('pelanggan', PelangganController::class);
